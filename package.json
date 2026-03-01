@@ -1,16 +1,20 @@
 {
-  "name": "mono-template",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
-  },
-  "devDependencies": {
-    "prettier": "^3.7.4",
-    "turbo": "^2.8.12",
-    "typescript": "5.9.2"
-  }
+	"name": "mono-template",
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "biome lint --write",
+		"lint:check": "biome lint",
+		"fmt": "biome format --write",
+		"fmt:check": "biome format",
+		"typecheck": "turbo run check-types"
+	},
+	"packageManager": "pnpm@10.28.2",
+	"devDependencies": {
+		"@biomejs/biome": "2.4.4",
+		"prettier": "^3.7.4",
+		"turbo": "^2.8.12",
+		"typescript": "5.9.2"
+	}
 }
