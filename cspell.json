@@ -1,0 +1,9 @@
+{
+	"ignoreRegExpList": [
+		"[^\\x00-\\x7F]+" // Ignores all non-ASCII text
+	],
+	"words": [
+		"Jsonified",
+		"orpc"
+	]
+}
