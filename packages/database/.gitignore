@@ -1,0 +1,10 @@
+# Drizzle
+/migrations
+*.sql
+
+# Build
+dist
+*.tsbuildinfo
+
+# Node
+node_modules
