@@ -25,7 +25,11 @@ const app = new Hono<Env>()
   .use("/rpc/*", async (c, next) => {
     const { matched, response } = await handler.handle(c.req.raw, {
       prefix: "/rpc",
-      context: {}, // Provide initial context if needed
+      /** Provide context as needed */
+      context: {
+        honoEnv: c.env,
+        honoVar: c.var,
+      },
     });
 
     if (matched) {

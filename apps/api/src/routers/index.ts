@@ -1,6 +1,6 @@
-import { pingPongRouter } from "./ping";
+import { exampleRouter } from "./example";
 
 // export all routes
 export const router = {
-  pingPong: pingPongRouter,
+  example: exampleRouter,
 };
