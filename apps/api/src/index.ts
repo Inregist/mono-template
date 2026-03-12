@@ -9,35 +9,35 @@ import { evaluateCors } from "./utils/cors";
 import { openApiRefPlugin } from "./utils/openapi";
 
 const handler = new OpenAPIHandler(router, {
-  interceptors: [
-    onError((error) => {
-      console.error(error);
-    }),
-  ],
-  plugins: [
-    new CORSPlugin({ exposeHeaders: ["Content-Disposition"] }),
-    openApiRefPlugin,
-  ],
+	interceptors: [
+		onError((error) => {
+			console.error(error);
+		}),
+	],
+	plugins: [
+		new CORSPlugin({ exposeHeaders: ["Content-Disposition"] }),
+		openApiRefPlugin,
+	],
 });
 
 const app = new Hono<Env>()
-  .use(cors({ origin: evaluateCors, credentials: true }))
-  .use("/rpc/*", async (c, next) => {
-    const { matched, response } = await handler.handle(c.req.raw, {
-      prefix: "/rpc",
-      /** Provide context as needed */
-      context: {
-        honoEnv: c.env,
-        honoVar: c.var,
-      },
-    });
+	.use(cors({ origin: evaluateCors, credentials: true }))
+	.use("/rpc/*", async (c, next) => {
+		const { matched, response } = await handler.handle(c.req.raw, {
+			prefix: "/rpc",
+			/** Provide context as needed */
+			context: {
+				honoEnv: c.env,
+				honoVar: c.var,
+			},
+		});
 
-    if (matched) {
-      return c.newResponse(response.body, response);
-    }
+		if (matched) {
+			return c.newResponse(response.body, response);
+		}
 
-    await next();
-  });
+		await next();
+	});
 
 export { router };
 export default app;
