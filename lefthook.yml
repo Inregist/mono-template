@@ -1,0 +1,12 @@
+pre-commit:
+  parallel: true
+  commands:
+    biome-check:
+      run: pnpm biome lint --write && pnpm biome format --write
+      stage_fixed: true
+
+    typecheck:
+      run: pnpm typecheck
+
+    spell:
+      run: pnpm spell
