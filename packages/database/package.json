@@ -3,9 +3,7 @@
 	"version": "0.0.0",
 	"private": true,
 	"exports": {
-		".": "./src/index.ts",
-		"./schema": "./src/schema/index.ts",
-		"./client": "./src/client"
+		".": "./src/index.ts"
 	},
 	"scripts": {
 		"db:generate": "drizzle-kit generate",
