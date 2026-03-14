@@ -6,6 +6,7 @@
 		"strict": true,
 		"skipLibCheck": true,
 		"lib": ["ESNext"],
+		"composite": true,
 		"outDir": "./dist",
 		"declaration": true,
 		"esModuleInterop": true

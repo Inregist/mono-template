@@ -8,7 +8,7 @@ pre-commit:
   parallel: true
   commands:
     biome-check:
-      run: pnpm fmt && pnpm lint
+      run: pnpm biome check --write
       stage_fixed: true
 
     typecheck:
