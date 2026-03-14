@@ -4,6 +4,7 @@ import type { Env } from "../env.types";
 
 export const orpc = os
 	.$context<{
+		headers: Headers;
 		honoEnv: Env["Bindings"];
 		honoVar: Env["Variables"];
 	}>()

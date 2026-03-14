@@ -6,21 +6,26 @@
 		".": "./src/index.ts"
 	},
 	"scripts": {
-		"db:generate": "drizzle-kit generate",
+		"db:auth-generate": "auth generate --config ../../apps/api/better-auth.config.ts --output src/schema/auth.ts",
+		"db:generate": "pnpm db:auth-generate && drizzle-kit generate",
 		"db:migrate": "drizzle-kit migrate",
 		"db:push": "drizzle-kit push",
 		"db:studio": "drizzle-kit studio"
 	},
 	"dependencies": {
+		"@neondatabase/serverless": "^1.0.2",
 		"dotenv": "^17.3.1",
 		"drizzle-orm": "^0.45.1",
 		"drizzle-zod": "^0.8.3",
 		"pg": "^8.20.0",
+		"postgres": "^3.4.8",
 		"zod": "^4.3.6"
 	},
 	"devDependencies": {
 		"@types/node": "^24.1.0",
 		"@types/pg": "^8.18.0",
+		"auth": "^1.5.5",
+		"better-auth": "^1.5.5",
 		"drizzle-kit": "^0.31.9",
 		"tsx": "^4.21.0"
 	}
