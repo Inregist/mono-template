@@ -12,17 +12,14 @@
 		"cf-typegen": "wrangler types --env-interface CloudflareBindings"
 	},
 	"dependencies": {
-		"@orpc/client": "^1.13.5",
-		"@orpc/openapi": "^1.13.5",
-		"@orpc/server": "^1.13.5",
-		"@orpc/zod": "^1.13.5",
+		"@orpc/client": "^1.13.7",
+		"@orpc/openapi": "^1.13.7",
+		"@orpc/server": "^1.13.7",
+		"@orpc/zod": "^1.13.7",
 		"@repo/database": "workspace:*",
 		"@types/node": "^24.11.0",
 		"better-auth": "^1.5.5",
-		"hono": "^4.12.3",
+		"hono": "^4.12.8",
 		"zod": "^4.3.6"
-	},
-	"devDependencies": {
-		"wrangler": "^4.4.0"
 	}
 }

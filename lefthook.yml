@@ -1,3 +1,9 @@
+pre-push:
+  parallel: true
+  commands:
+    audit:
+      run: pnpm audit --audit-level medium
+
 pre-commit:
   parallel: true
   commands:
