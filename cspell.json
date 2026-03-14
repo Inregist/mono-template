@@ -4,12 +4,12 @@
 	// Ignore patterns for files and directories that shouldn't be spell-checked
 	"ignorePaths": [
 		// Build artifacts and dependencies
-		"node_modules/**",
-		"dist/**",
-		"build/**",
-		".next/**",
-		".turbo/**",
-		"out/**",
+		"node_modules",
+		"dist",
+		"build",
+		".next",
+		".turbo",
+		"out",
 
 		// Lock files
 		"pnpm-lock.yaml",
@@ -18,14 +18,13 @@
 		"bun.lockb",
 
 		// Auto-generated files
-		"**/*.d.ts",
 		"worker-configuration.d.ts",
 
 		// Cache and config files
-		".git/**",
-		".vscode/**",
-		".idea/**",
-		"coverage/**",
+		".git",
+		".vscode",
+		".idea",
+		"coverage",
     "drizzle.config.ts",
 
 		// Minified and bundled files
@@ -35,16 +34,16 @@
 		"**/*.chunk.js",
 
 		// Asset files
-		"**/*.svg",
-		"**/*.png",
-		"**/*.jpg",
-		"**/*.jpeg",
-		"**/*.gif",
-		"**/*.ico",
-		"**/*.woff",
-		"**/*.woff2",
-		"**/*.ttf",
-		"**/*.eot",
+		"*.svg",
+		"*.png",
+		"*.jpg",
+		"*.jpeg",
+		"*.gif",
+		"*.ico",
+		"*.woff",
+		"*.woff2",
+		"*.ttf",
+		"*.eot",
 
 		// Docker and infrastructure
 		"Dockerfile",

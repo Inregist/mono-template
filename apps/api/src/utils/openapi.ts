@@ -9,7 +9,7 @@ export const openApiRefPlugin = new OpenAPIReferencePlugin({
 			title: "ORPC Playground",
 			version: "1.0.0",
 		},
-		servers: [{ url: "/rpc" }],
+		servers: [{ url: "/api/rpc" }],
 		security: [{ bearerAuth: [] }],
 		components: {
 			securitySchemes: {

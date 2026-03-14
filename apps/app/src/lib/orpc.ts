@@ -6,7 +6,7 @@ import { createTanstackQueryUtils } from "@orpc/tanstack-query";
 import { router } from "@repo/api";
 
 const link = new OpenAPILink(router, {
-	url: "http://localhost:8787/rpc",
+	url: `${import.meta.env.VITE_API_BASE_URL}/api/rpc`,
 	headers: () => ({}),
 	fetch: (request, init) => {
 		return globalThis.fetch(request, {

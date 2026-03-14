@@ -36,9 +36,9 @@ const app = new Hono<Env>()
 	.on(["POST", "GET"], "/api/auth/*", async (c) => {
 		return c.get("AUTH").handler(c.req.raw);
 	})
-	.use("/rpc/*", async (c, next) => {
+	.use("/api/rpc/*", async (c, next) => {
 		const { matched, response } = await handler.handle(c.req.raw, {
-			prefix: "/rpc",
+			prefix: "/api/rpc",
 			/** Provide context as needed */
 			context: {
 				headers: c.req.raw.headers,
@@ -54,5 +54,4 @@ const app = new Hono<Env>()
 		await next();
 	});
 
-export { router };
 export default app;
