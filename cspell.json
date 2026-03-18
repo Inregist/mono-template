@@ -1,6 +1,5 @@
 {
 	"$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
-
 	// Ignore patterns for files and directories that shouldn't be spell-checked
 	"ignorePaths": [
 		// Build artifacts and dependencies
@@ -10,29 +9,24 @@
 		".next",
 		".turbo",
 		"out",
-
 		// Lock files
 		"pnpm-lock.yaml",
 		"package-lock.json",
 		"yarn.lock",
 		"bun.lockb",
-
 		// Auto-generated files
 		"worker-configuration.d.ts",
-
 		// Cache and config files
 		".git",
 		".vscode",
 		".idea",
 		"coverage",
-    "drizzle.config.ts",
-
+		"drizzle.config.ts",
 		// Minified and bundled files
 		"**/*.min.js",
 		"**/*.min.css",
 		"**/*.bundle.js",
 		"**/*.chunk.js",
-
 		// Asset files
 		"*.svg",
 		"*.png",
@@ -44,12 +38,10 @@
 		"*.woff2",
 		"*.ttf",
 		"*.eot",
-
 		// Docker and infrastructure
 		"Dockerfile",
-		"docker-compose.yaml",
+		"docker-compose.yaml"
 	],
-
 	// Dictionaries to enable for this project
 	"dictionaries": [
 		"typescript",
@@ -58,82 +50,73 @@
 		"css",
 		"bash",
 		"softwareTerms",
-		"misc",
+		"misc"
 	],
-
 	// Language settings
 	"language": "en",
-
 	// Enable case-sensitive checking
 	"caseSensitive": false,
-
 	// Allow compound words
 	"allowCompoundWords": true,
-
 	// Specific words for this project
 	"words": [
-		// Project-specific terms
-		"Jsonified",
-		"orpc",
-		"wrangler",
-		"workerd",
-		"unenv",
-		"drizzle",
+		"afterblur",
+		"beforeblur",
 		"biomejs",
-		"tanstack",
-		"hono",
-		"vite",
-		"vitejs",
 		"cloudchamber",
-		"hyperdrive",
-		"ratelimits",
-		"logfwdr",
-		"esbuild",
-		"rollup",
-		"jridgewell",
-		"emnapi",
-		"napi",
+		"crossws",
 		"cspotcode",
+		"dotenv",
+		"drizzle",
+		"emnapi",
+		"esbuild",
+		"fastify",
+		"hono",
+		"horiz",
+		"hyperdrive",
+		"imagesizes",
+		"imagesrcset",
+		"imask",
+		"inregist",
+		"itemprop",
+		"jridgewell",
+		"Jsonified",
+		"jsxs",
+		"logfwdr",
+		"napi",
+		"navigateerror",
+		"navigatesuccess",
+		"onpropertychange",
+		"orpc",
+		"panose",
 		"petamoriken",
 		"poppinss",
-		"crossws",
-		"fastify",
-		"sindresorhus",
-		"dotenv",
-		"inregist",
-
-		// Web/React terms
-		"jsxs",
 		"preinit",
-		"horiz",
-		"panose",
-		"onpropertychange",
-		"itemprop",
-		"imagesrcset",
-		"imagesizes",
+		"ratelimits",
+		"rjsf",
+		"rollup",
 		"serviceworker",
-		"beforeblur",
-		"afterblur",
-		"navigatesuccess",
-		"navigateerror",
+		"sindresorhus",
 		"suspensey",
+		"tanstack",
+		"unenv",
+		"vite",
+		"vitejs",
+		"workerd",
+		"wrangler",
+    "pdpa"
 	],
-
 	// Ignore patterns within files
 	"ignoreRegExpList": [
 		// Ignore non-ASCII text
 		"[^\\x00-\\x7F]+",
-
 		// Ignore URLs
 		"https?://[^\\s]+",
-
 		// Ignore email addresses
 		"\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b",
-
 		// Ignore UUIDs
 		"\\b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\b",
-
 		// Ignore hex color codes
-		"#[0-9a-fA-F]{3,8}\\b",
-	],
+		"#[0-9a-fA-F]{3,8}\\b"
+	]
 }

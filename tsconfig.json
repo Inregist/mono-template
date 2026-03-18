@@ -1,6 +1,7 @@
 {
 	"files": [],
 	"references": [
-		{ "path": "./packages/database" }
+		{ "path": "./packages/database" },
+		{ "path": "./packages/mantine" }
 	]
 }

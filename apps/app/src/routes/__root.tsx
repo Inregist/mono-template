@@ -1,3 +1,9 @@
+import { MantineProvider } from "@repo/mantine/core";
+import { ModalsProvider } from "@repo/mantine/modals";
+import { Notifications } from "@repo/mantine/notifications";
+import mantineTheme from "@repo/mantine/theme";
+import { TanStackDevtools } from "@tanstack/react-devtools";
+import { formDevtoolsPlugin } from "@tanstack/react-form-devtools";
 import type { QueryClient } from "@tanstack/react-query";
 import {
   createRootRouteWithContext,
@@ -8,7 +14,16 @@ import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 const RootLayout = () => (
   <>
-    <Outlet />
+    <MantineProvider theme={mantineTheme} defaultColorScheme="auto">
+      <Notifications />
+      <ModalsProvider>
+        <Outlet />
+      </ModalsProvider>
+    </MantineProvider>
+    <TanStackDevtools
+      config={{ hideUntilHover: true }}
+      plugins={[formDevtoolsPlugin()]}
+    />
     <TanStackRouterDevtools />
   </>
 );

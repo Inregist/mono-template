@@ -5,6 +5,7 @@
 		"quickfix.biome": "explicit",
 		"source.organizeImports.biome": "explicit"
 	},
+  "typescript.preferences.includePackageJsonAutoImports": "on",
 	"json.schemaDownload.trustedDomains": {
 		// Default
 		"https://schemastore.azurewebsites.net/": true,

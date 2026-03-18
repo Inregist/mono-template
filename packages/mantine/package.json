@@ -1,0 +1,46 @@
+{
+	"name": "@repo/mantine",
+	"version": "0.0.0",
+	"private": true,
+  "scripts": {
+    "theme:generate": "tailwind-preset-mantine src/theme.ts -o src/styles/theme.css && biome check --write src/styles/theme.css"
+  },
+	"exports": {
+		"./carousel": "./src/mantine/carousel.ts",
+		"./charts": "./src/mantine/charts.ts",
+		"./components": "./src/components/index.ts",
+    "./core":"./src/mantine/core.ts",
+		"./dates": "./src/mantine/dates.ts",
+		"./dropzone": "./src/mantine/dropzone.ts",
+		"./hooks": "./src/mantine/hooks.ts",
+		"./modals": "./src/mantine/modals.ts",
+		"./notifications": "./src/mantine/notifications.ts",
+		"./nprogress": "./src/mantine/nprogress.ts",
+		"./spotlight": "./src/mantine/spotlight.ts",
+    "./style.css": "./src/styles/tailwind-mantine.css",
+    "./theme": "./src/theme.ts"
+	},
+	"dependencies": {
+		"@mantine/carousel": "^8.3.17",
+		"@mantine/charts": "^8.3.17",
+		"@mantine/core": "^8.3.17",
+		"@mantine/dates": "^8.3.17",
+		"@mantine/dropzone": "^8.3.17",
+		"@mantine/hooks": "^8.3.17",
+		"@mantine/modals": "^8.3.17",
+		"@mantine/notifications": "^8.3.17",
+		"@mantine/nprogress": "^8.3.17",
+		"@mantine/spotlight": "^8.3.17",
+		"dayjs": "^1.11.20",
+		"embla-carousel": "^8.6.0",
+		"embla-carousel-react": "^8.6.0",
+		"react": "^19.2.0",
+		"react-imask": "^7.6.1",
+		"recharts": "^3.8.0",
+		"tailwindcss": "^4.2.1",
+		"tailwind-preset-mantine": "^3.0.3"
+	},
+	"devDependencies": {
+		"@types/react": "^19.2.7"
+	}
+}

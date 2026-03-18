@@ -7,7 +7,8 @@
 		"dev": "vite",
 		"build": "tsc -b && vite build",
 		"deploy": "pnpm run build && wrangler deploy",
-		"cf-typegen": "wrangler types"
+		"cf-typegen": "wrangler types",
+		"predev": "pnpm --filter @repo/mantine theme:generate"
 	},
 	"dependencies": {
 		"@orpc/client": "^1.13.7",
@@ -15,14 +16,19 @@
 		"@orpc/openapi-client": "^1.13.7",
 		"@orpc/tanstack-query": "^1.13.7",
 		"@repo/api": "workspace:*",
+		"@repo/mantine": "workspace:*",
 		"@tailwindcss/vite": "^4.2.1",
+		"@tanstack/react-devtools": "^0.9.13",
+		"@tanstack/react-form": "^1.28.5",
+		"@tanstack/react-form-devtools": "^0.2.18",
 		"@tanstack/react-query": "^5.90.21",
 		"@tanstack/react-router": "^1.163.3",
 		"@tanstack/react-router-devtools": "^1.163.3",
 		"better-auth": "^1.5.5",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
-		"tailwindcss": "^4.2.1"
+		"tailwindcss": "^4.2.1",
+		"zod": "^4.3.6"
 	},
 	"devDependencies": {
 		"@cloudflare/vite-plugin": "^1.28.0",
@@ -33,6 +39,7 @@
 		"@types/react-dom": "^19.2.3",
 		"@vitejs/plugin-react-swc": "^4.2.3",
 		"globals": "^16.5.0",
+		"postcss": "^8.5.8",
 		"typescript": "~5.9.3",
 		"vite": "^7.3.1"
 	}
